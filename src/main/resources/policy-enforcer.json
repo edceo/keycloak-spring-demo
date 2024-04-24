@@ -1,0 +1,9 @@
+{
+  "realm": "edceo-simulation",
+  "auth-server-url": "http://localhost:8080",
+  "resource": "home-app",
+  "credentials": {
+    "secret": "zfopel8nyMgZ4kpUADHxHOn6WI67Zurx"
+  },
+  "lazy-load-paths": true
+}
