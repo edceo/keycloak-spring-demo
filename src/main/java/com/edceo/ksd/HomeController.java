@@ -15,7 +15,7 @@ public class HomeController {
 
     @GetMapping("/user")
     public String userPage() {
-        return "This is a admin-user page";
+        return "This is a admin-manager-user page";
     }
 
     @GetMapping("/admin")
@@ -26,5 +26,10 @@ public class HomeController {
     @GetMapping("/manager")
     public String managerPage() {
         return "This is a admin-manager page";
+    }
+
+    @GetMapping("/admin-2")
+    public String admin2Page() {
+        return "This is a admin2 page";
     }
 }

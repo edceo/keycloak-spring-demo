@@ -1,0 +1,29 @@
+version: '3.8'
+
+networks:
+  keycloak:
+    driver: bridge
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.3
+    container_name: keycloak
+    command:
+      - start
+      - --optimized
+      - --import-realm
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../import:/opt/keycloak/data/import
+    networks:
+      - keycloak
+    environment:
+      - JAVA_OPTS_APPEND=-Dkeycloak.profile.feature.scripts=enabled
+      - KC_HOSTNAME_URL=http://localhost:8080
+      - KC_HEALTH_ENABLED=true
+      - KC_HTTP_ENABLED=true
+      - KC_METRICS_ENABLED=true
+      - KC_PROXY=reencrypt
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin

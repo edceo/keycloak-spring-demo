@@ -3,7 +3,13 @@
   "auth-server-url": "http://localhost:8080",
   "resource": "home-app",
   "credentials": {
-    "secret": "zfopel8nyMgZ4kpUADHxHOn6WI67Zurx"
+    "secret": "MQB252RBTsaJr51v4Erd3h56UQAJSDnG"
   },
-  "lazy-load-paths": true
+  "lazy-load-paths": true,
+  "paths": [
+    {
+      "path": "/home/public",
+      "enforcement-mode": "DISABLED"
+    }
+  ]
 }
